@@ -18,7 +18,7 @@
   
 
   function whatIsTimesOfDay() {
-      let date = new Date;
+      let date = new Date; 
       let hours = date.getHours();
       if (hours < 6) return 'night'
       else if (hours < 12) return 'morning'
@@ -82,47 +82,33 @@
 
 
   inputDiv.onblur = function() {
-    //СЮДА ПИСАТЬ КОД СОХРАНЕНИЯ В ЛОКАЛ СТОРИДЖ И С СЕРОГО ЦВЕТА СДЕАТЬ БЕЛЫМ
     console.log('hello im blur');
-   // document.querySelector('.name') = inputDiv;
     userName = inputDiv.value;
     myStorage.setItem('userName', userName);
   }
 
-  async function getQuotes() {  
-    const quotes = 'data.json';
-    const res = await fetch(quotes);
-    const data = await res.json(); 
-    console.log(data);
-    console.log(quotes);
-    console.log(res);
+  new Image().src = `https://raw.githubusercontent.com/PASSAGYR69/stage1-tasks/assets/images/${whatIsTimesOfDay()}/20.jpg`;
+  new Image().src = `https://raw.githubusercontent.com/PASSAGYR69/stage1-tasks/assets/images/${whatIsTimesOfDay()}/01.jpg`;
+  new Image().src = `https://raw.githubusercontent.com/PASSAGYR69/stage1-tasks/assets/images/${whatIsTimesOfDay()}/02.jpg`;
+  new Image().src = `https://raw.githubusercontent.com/PASSAGYR69/stage1-tasks/assets/images/${whatIsTimesOfDay()}/03.jpg`;
+  new Image().src = `https://raw.githubusercontent.com/PASSAGYR69/stage1-tasks/assets/images/${whatIsTimesOfDay()}/04.jpg`;
+  new Image().src = `https://raw.githubusercontent.com/PASSAGYR69/stage1-tasks/assets/images/${whatIsTimesOfDay()}/05.jpg`;
+  new Image().src = `https://raw.githubusercontent.com/PASSAGYR69/stage1-tasks/assets/images/${whatIsTimesOfDay()}/06.jpg`;
+  new Image().src = `https://raw.githubusercontent.com/PASSAGYR69/stage1-tasks/assets/images/${whatIsTimesOfDay()}/07.jpg`;
+  new Image().src = `https://raw.githubusercontent.com/PASSAGYR69/stage1-tasks/assets/images/${whatIsTimesOfDay()}/08.jpg`;
+  new Image().src = `https://raw.githubusercontent.com/PASSAGYR69/stage1-tasks/assets/images/${whatIsTimesOfDay()}/09.jpg`;
+  new Image().src = `https://raw.githubusercontent.com/PASSAGYR69/stage1-tasks/assets/images/${whatIsTimesOfDay()}/10.jpg`;
+  new Image().src = `https://raw.githubusercontent.com/PASSAGYR69/stage1-tasks/assets/images/${whatIsTimesOfDay()}/11.jpg`;
+  new Image().src = `https://raw.githubusercontent.com/PASSAGYR69/stage1-tasks/assets/images/${whatIsTimesOfDay()}/12.jpg`;
+  new Image().src = `https://raw.githubusercontent.com/PASSAGYR69/stage1-tasks/assets/images/${whatIsTimesOfDay()}/13.jpg`;
+  new Image().src = `https://raw.githubusercontent.com/PASSAGYR69/stage1-tasks/assets/images/${whatIsTimesOfDay()}/14.jpg`;
+  new Image().src = `https://raw.githubusercontent.com/PASSAGYR69/stage1-tasks/assets/images/${whatIsTimesOfDay()}/15.jpg`;
+  new Image().src = `https://raw.githubusercontent.com/PASSAGYR69/stage1-tasks/assets/images/${whatIsTimesOfDay()}/16.jpg`;
+  new Image().src = `https://raw.githubusercontent.com/PASSAGYR69/stage1-tasks/assets/images/${whatIsTimesOfDay()}/17.jpg`;
+  new Image().src = `https://raw.githubusercontent.com/PASSAGYR69/stage1-tasks/assets/images/${whatIsTimesOfDay()}/18.jpg`;
+  new Image().src = `https://raw.githubusercontent.com/PASSAGYR69/stage1-tasks/assets/images/${whatIsTimesOfDay()}/19.jpg`;
+  
 
-  }
- // getQuotes();
 
-
- const audio = new Audio();
- let isPlay = false;
- let playButton = document.querySelector('.play');
-
-
-
-function playAudio() {
-  audio.src = "https://cdn41.zvuk.com/track/stream?id=31608689&code=bJNV7F0UGrOedUBKkqhn-Q&expires=1635282717";// ссылка на аудио-файл;
-  audio.currentTime = 0;
-
-  if(isPlay) {
-    audio.pause();
-    isPlay = false;
-    playButton.classList.remove  ('pause');
-    playButton.classList.add('play');
-  } 
-   else {
-    audio.play();
-    isPlay = true;
-    playButton.classList.remove  ('play');
-    playButton.classList.add('pause');
-   }
-}
-
+ 
 
