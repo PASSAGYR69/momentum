@@ -9,15 +9,12 @@
   <title>momentum</title>
 </head>
 <body>
-
   <header class="header">
     <div class="player">
-      <audio src="https://cdn41.zvuk.com/track/stream?id=31608689&code=bJNV7F0UGrOedUBKkqhn-Q&expires=1635282717" ></audio>
-
       <div class="player-controls">
-        <button class="play-prev player-icon"></button>
+        <button class="play-prev player-icon" onclick="prevTrack()" ></button>
         <button class="play player-icon" onclick="playAudio()" ></button>
-        <button class="play-next player-icon"></button>
+        <button class="play-next player-icon" onclick="nextTrack()"></button>
       </div>
       <ul class="play-list"></ul>
     </div>
@@ -74,8 +71,101 @@
 
     showQuote()
     
+  </script>
+  <script>
+    const audio = new Audio();
+ let isPlay = false;
+ let playButton = document.querySelector('.play');
+ let numberOfTrack = 0;
+
+ const playList = [
+  {      
+    title: 'Aqua Caelestis',
+    src: 'assets/sounds/Aqua Caelestis.mp3',
+    duration: '00:58'
+  },  
+  {      
+    title: 'River Flows In You',
+    src: 'assets/sounds/River Flows In You.mp3',
+    duration: '03:50'
+  },
+  {      
+      title: 'Ennio Morricone',
+      src: 'assets/sounds/Ennio Morricone.mp3',
+      duration: '01:37'
+  },
+  {      
+      title: 'Summer Wind',
+      src: 'assets/sounds/Summer Wind.mp3',
+      duration: '01:37'
+  }
+  
+]
+
+function playAudio() {
+  audio.src = playList[numberOfTrack].src;// ссылка на аудио-файл;
+  audio.currentTime = 0;
+
+  if(isPlay) {
+    audio.pause();
+    isPlay = false;
+    playButton.classList.remove  ('pause');
+    playButton.classList.add('play');
+  } 
+   else {
+    audio.play();
+    isPlay = true;
+    playButton.classList.remove  ('play');
+    playButton.classList.add('pause');
+   }
+}
+
+function prevTrack() {
+  if(numberOfTrack == 0) {
+    numberOfTrack = 3;
+  }
+  else {numberOfTrack--}
+  
+  audio.src = playList[numberOfTrack].src;
+  audio.currentTime = 0;
+  if(isPlay) {
+    audio.play();
+    isPlay = true;
+    playButton.classList.remove  ('play');
+    playButton.classList.add('pause');
+  }
+  else{
+    audio.pause();
+    isPlay = false;
+    playButton.classList.remove  ('pause');
+    playButton.classList.add('play');
+  }
 
 
+}
+
+
+function nextTrack() {
+  if(numberOfTrack == 3) {
+    numberOfTrack = 0;
+  }
+  else {numberOfTrack++};
+
+  audio.src = playList[numberOfTrack].src;
+  audio.currentTime = 0;
+  if(isPlay) {
+    audio.play();
+    isPlay = true;
+    playButton.classList.remove  ('play');
+    playButton.classList.add('pause');
+  }
+  else{
+    audio.pause();
+    isPlay = false;
+    playButton.classList.remove  ('pause');
+    playButton.classList.add('play');
+  }
+}
   </script>
   
 </body>
