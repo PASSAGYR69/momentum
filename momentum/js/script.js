@@ -113,9 +113,9 @@ getWeather()
 
 
 
-import { playLis }  from './playList.js'
+//import { playLis }  from './playList.js'
 
-console.log(playLis);
+//console.log(playLis);
 
 
 
