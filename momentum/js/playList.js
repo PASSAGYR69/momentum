@@ -1,4 +1,4 @@
-const playList = [
+const playLis = [
     {      
       title: 'Aqua Caelestis',
       src: '../assets/sounds/Aqua Caelestis.mp3',
@@ -21,4 +21,4 @@ const playList = [
     }
     
   ]
-  export default playList;  
+  export default playLis;  
