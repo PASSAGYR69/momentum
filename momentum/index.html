@@ -19,7 +19,7 @@
       <ul class="play-list"></ul>
     </div>
     <div class="weather">
-      <input type="text" class="city" />
+      <input type="text" class="city" value="Enter name of city" />
       <i class="weather-icon owf"></i>
       <div class="weather-error"></div>
       <div class="description-container">
@@ -50,9 +50,9 @@
     </div>
   </footer>
   
-  <script src="js/script.js"></script>
+  <script src="js/script.js" type="module"></script>
   <script type="text/javascript" src="js/data.json"></script>
-  <script type="module" src="js/playList.js"></script>
+<!--<script type="module" src="js/playList.js"></script> -->
 
   <script> 
 
@@ -78,7 +78,7 @@
  let playButton = document.querySelector('.play');
  let numberOfTrack = 0;
 
- const playList = [
+ /*const playList = [
   {      
     title: 'Aqua Caelestis',
     src: 'assets/sounds/Aqua Caelestis.mp3',
@@ -100,7 +100,7 @@
       duration: '01:37'
   }
   
-]
+]*/
 
 function playAudio() {
   audio.src = playList[numberOfTrack].src;// ссылка на аудио-файл;
