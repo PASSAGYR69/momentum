@@ -67,7 +67,7 @@ setTime()
 function setDate() {
   let date = new Date;
   let days = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'];
-  let weekDay = days [date.getDay() - 1];
+  let weekDay = days [date.getDay() - 1]; weekDay ? weekDay : weekDay = 'Sunday';
   let months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
   let month = months [date.getMonth()];
   let dayOfMonth = date.getDate();
