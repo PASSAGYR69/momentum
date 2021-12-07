@@ -1,0 +1,26 @@
+playList = [
+  {
+    title: 'Electro House Trans Dance',
+    src: 'https://cdn.mp3xa.cc/Kur9W3FVx7IAOSOj6aFUvQ/1638768802/L29ubGluZS9tcDMvMjAyMS8xMi9XaGVyZSBJdCdzIEFUVCAtIEFjdCBMaWtlIFRoYXQgKFZlc3RlIFJlbWl4KS5tcDM'
+  },
+  {      
+    title: 'Aqua Caelestis',
+    src: 'assets/sounds/Aqua Caelestis.mp3',
+    duration: '00:58'
+  },  
+  {      
+    title: 'River Flows In You',
+    src: 'assets/sounds/River Flows In You.mp3',
+    duration: '03:50'
+  },
+  {      
+      title: 'Ennio Morricone',
+      src: 'assets/sounds/Ennio Morricone.mp3',
+      duration: '01:37'
+  },
+  {      
+      title: 'Summer Wind',
+      src: 'assets/sounds/Summer Wind.mp3',
+      duration: '01:37'
+  }
+]
